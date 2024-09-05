@@ -50,6 +50,8 @@
     </div> 
     
     <script>
+	document.querySelector('#bntplayer1').href = "https://tailuge.github.io/billiards/dist/?websocketserver=wss%3A%2F%2Fbilliards.onrender.com%2Fws&tableId=&name=Player1&clientId=p1650281&ruletype=snooker";
+	document.querySelector('#bntplayer2').href = "https://tailuge.github.io/billiards/dist/?websocketserver=wss%3A%2F%2Fbilliards.onrender.com%2Fws&tableId=&name=Player2&clientId=p2650281&ruletype=snooker";
 	document.querySelector('#ruletype').addEventListener('change',function(){
 	    var mesaId = document.querySelector('#idMesa').value;
 	    document.querySelector('#bntplayer1').href = "https://tailuge.github.io/billiards/dist/?websocketserver=wss%3A%2F%2Fbilliards.onrender.com%2Fws&tableId="+mesaId+"&name=Player1&clientId=p1650281&ruletype="+this.value;

@@ -36,6 +36,7 @@
 	    <option value="threecushion">Three Cushion</option>
 	    <option value="nineball">Nine Ball</option>
 	    <option value="fourteenone">14-1</option>
+	    <option value="miniclip8ball">Miniclip 8 Ball</option>
 	</select>
 	<br/>
 	<br/>
@@ -61,6 +62,10 @@
 	document.querySelector('#bntplayer1').href = "https://tailuge.github.io/billiards/dist/?websocketserver=wss%3A%2F%2Fbilliards.onrender.com%2Fws&tableId="+dataHoraFormatada+"&name=Player1&clientId=p1650281&ruletype=snooker";
 	document.querySelector('#bntplayer2').href = "https://tailuge.github.io/billiards/dist/?websocketserver=wss%3A%2F%2Fbilliards.onrender.com%2Fws&tableId="+dataHoraFormatada+"&name=Player2&clientId=p2650281&ruletype=snooker";
 	document.querySelector('#ruletype').addEventListener('change',function(){
+	    if(this.value == "miniclip8ball"){
+		window.location = "https://prod-web-pool.miniclip.com/mc?localmc";
+		return false;
+	    }
 	    var mesaId = document.querySelector('#idMesa').value;
 	    document.querySelector('#bntplayer1').href = "https://tailuge.github.io/billiards/dist/?websocketserver=wss%3A%2F%2Fbilliards.onrender.com%2Fws&tableId="+mesaId+"&name=Player1&clientId=p1650281&ruletype="+this.value;
 	    document.querySelector('#bntplayer2').href = "https://tailuge.github.io/billiards/dist/?websocketserver=wss%3A%2F%2Fbilliards.onrender.com%2Fws&tableId="+mesaId+"&name=Player2&clientId=p2650281&ruletype="+this.value;
